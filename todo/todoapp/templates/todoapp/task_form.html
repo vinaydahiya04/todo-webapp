@@ -1,0 +1,14 @@
+{% extends "todoapp/base.html" %}
+{% load bootstrap3 %}
+
+
+
+
+{% block body_block %}
+<form  method="POST" id="TaskForm">
+    {% csrf_token %}
+    {%bootstrap_form form%}
+    <input type="submit" class="btn btn-primary btn-large" style="background-color: blue;" value="CreateForm">
+</form>
+
+{% endblock body_block %}
